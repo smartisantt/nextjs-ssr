@@ -162,6 +162,13 @@
   resolved "https://registry.npmmirror.com/@next/swc-win32-x64-msvc/download/@next/swc-win32-x64-msvc-12.0.7.tgz#8d75d3b6a872ab97ab73e3b4173d56dbb2991917"
   integrity sha512-frEWtbf+q8Oz4e2UqKJrNssk6DZ6/NLCQXn5/ORWE9dPAfe9XS6aK5FRZ6DuEPmmKd5gOoRkKJFFz5nYd+TeyQ==
 
+"@types/http-proxy@^1.17.5":
+  version "1.17.8"
+  resolved "https://registry.npmmirror.com/@types/http-proxy/download/@types/http-proxy-1.17.8.tgz#968c66903e7e42b483608030ee85800f22d03f55"
+  integrity sha512-5kPLG5BKpWYkw/LVOGWpiq3nEVqxiN32rTgI53Sk12/xHFQ2rG3ehI9IO+O3W2QoKeyB92dJkoka8SUm6BX1pA==
+  dependencies:
+    "@types/node" "*"
+
 "@types/node@*":
   version "16.11.12"
   resolved "https://registry.npmmirror.com/@types/node/download/@types/node-16.11.12.tgz#ac7fb693ac587ee182c3780c26eb65546a1a3c10"
@@ -248,6 +255,13 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.nlark.com/available-typed-arrays/download/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha1-kvlWFlAQadB9EO2y/DfT4cZRI7c=
 
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.npmmirror.com/axios/download/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha1-gE5voeS5xSiFAd2d/1anoJQNINY=
+  dependencies:
+    follow-redirects "^1.14.4"
+
 base64-js@^1.0.2:
   version "1.5.1"
   resolved "https://registry.npmmirror.com/base64-js/download/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
@@ -273,7 +287,7 @@ bn.js@^5.0.0, bn.js@^5.1.1:
   resolved "https://registry.nlark.com/bn.js/download/bn.js-5.2.0.tgz#358860674396c6997771a9d051fcc1b57d4ae002"
   integrity sha1-NYhgZ0OWxpl3canQUfzBtX1K4AI=
 
-braces@~3.0.2:
+braces@^3.0.1, braces@~3.0.2:
   version "3.0.2"
   resolved "https://registry.nlark.com/braces/download/braces-3.0.2.tgz#3454e1a462ee8d599e236df336cd9ea4f8afe107"
   integrity sha1-NFThpGLujVmeI23zNs2epPiv4Qc=
@@ -687,6 +701,11 @@ etag@1.8.1:
   resolved "https://registry.nlark.com/etag/download/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
+eventemitter3@^4.0.0:
+  version "4.0.7"
+  resolved "https://registry.nlark.com/eventemitter3/download/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
+  integrity sha1-Lem2j2Uo1WRO9cWVJqG0oHMGFp8=
+
 events@3.3.0:
   version "3.3.0"
   resolved "https://registry.npmmirror.com/events/download/events-3.3.0.tgz#31a95ad0a924e2d2c419a813aeb2c4e878ea7400"
@@ -723,6 +742,11 @@ find-up@^4.0.0:
   dependencies:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
+
+follow-redirects@^1.0.0, follow-redirects@^1.14.4:
+  version "1.14.6"
+  resolved "https://registry.npmmirror.com/follow-redirects/download/follow-redirects-1.14.6.tgz#8cfb281bbc035b3c067d6cd975b0f6ade6e855cd"
+  integrity sha512-fhUl5EwSJbbl8AR+uYL2KQDxLkdSjZGR36xy46AO7cOMTrCMON6Sa28FmAnC2tRTDbd/Uuzz3aJBv7EBN7JH8A==
 
 foreach@^2.0.5:
   version "2.0.5"
@@ -856,6 +880,26 @@ http-errors@1.7.3:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
+http-proxy-middleware@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.nlark.com/http-proxy-middleware/download/http-proxy-middleware-2.0.1.tgz#7ef3417a479fb7666a571e09966c66a39bd2c15f"
+  integrity sha1-fvNBekeft2ZqVx4Jlmxmo5vSwV8=
+  dependencies:
+    "@types/http-proxy" "^1.17.5"
+    http-proxy "^1.18.1"
+    is-glob "^4.0.1"
+    is-plain-obj "^3.0.0"
+    micromatch "^4.0.2"
+
+http-proxy@^1.18.1:
+  version "1.18.1"
+  resolved "https://registry.nlark.com/http-proxy/download/http-proxy-1.18.1.tgz#401541f0534884bbf95260334e72f88ee3976549"
+  integrity sha1-QBVB8FNIhLv5UmAzTnL4juOXZUk=
+  dependencies:
+    eventemitter3 "^4.0.0"
+    follow-redirects "^1.0.0"
+    requires-port "^1.0.0"
+
 https-browserify@1.0.0:
   version "1.0.0"
   resolved "https://registry.npmmirror.com/https-browserify/download/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
@@ -987,6 +1031,11 @@ is-number@^7.0.0:
   resolved "https://registry.nlark.com/is-number/download/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=
 
+is-plain-obj@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.nlark.com/is-plain-obj/download/is-plain-obj-3.0.0.tgz#af6f2ea14ac5a646183a5bbdb5baabbc156ad9d7"
+  integrity sha1-r28uoUrFpkYYOlu9tbqrvBVq2dc=
+
 is-regex@^1.1.4:
   version "1.1.4"
   resolved "https://registry.nlark.com/is-regex/download/is-regex-1.1.4.tgz#eef5663cd59fa4c0ae339505323df6854bb15958"
@@ -1101,6 +1150,14 @@ merge-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.nlark.com/merge-stream/download/merge-stream-2.0.0.tgz?cache=0&sync_timestamp=1618910562677&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fmerge-stream%2Fdownload%2Fmerge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
   integrity sha1-UoI2KaFN0AyXcPtq1H3GMQ8sH2A=
+
+micromatch@^4.0.2:
+  version "4.0.4"
+  resolved "https://registry.nlark.com/micromatch/download/micromatch-4.0.4.tgz?cache=0&sync_timestamp=1618910283285&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fmicromatch%2Fdownload%2Fmicromatch-4.0.4.tgz#896d519dfe9db25fce94ceb7a500919bf881ebf9"
+  integrity sha1-iW1Rnf6dsl/OlM63pQCRm/iB6/k=
+  dependencies:
+    braces "^3.0.1"
+    picomatch "^2.2.3"
 
 miller-rabin@^4.0.0:
   version "4.0.1"
@@ -1325,7 +1382,7 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-picomatch@^2.0.4, picomatch@^2.2.1:
+picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.3:
   version "2.3.0"
   resolved "https://registry.nlark.com/picomatch/download/picomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
   integrity sha1-8fBh3o9qS/AiiS4tEoI0+5gwKXI=
@@ -1462,6 +1519,11 @@ regenerator-runtime@^0.13.4:
   version "0.13.9"
   resolved "https://registry.nlark.com/regenerator-runtime/download/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=
+
+requires-port@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.nlark.com/requires-port/download/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
+  integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
 ripemd160@^2.0.0, ripemd160@^2.0.1:
   version "2.0.2"

@@ -1,6 +1,12 @@
+ 
 import Head from 'next/head';
+import getMovies from '../../service/movieService'
 
 export default function index() {
+  getMovies().then(res=>{
+    console.log(res);
+  })
+
   return (
     <div>
       <Head>
