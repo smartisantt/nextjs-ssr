@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import getMovies from '../../service/movieService';
 
-export default function Page({ movies }) {
-  console.log(movies);
+export default function Page(props) {
+  console.log(props, 'props');
   return (
     <div>
       <Head>
@@ -10,9 +10,11 @@ export default function Page({ movies }) {
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
       <ul>
-        {movies.map((m) => {
-          <li key={m.id}>{m.name}</li>;
-        })}
+        {props.movies?.map((m) => (
+          <li key={m.id}>
+            <span>{m.name}</span>
+          </li>
+        ))}
       </ul>
     </div>
   );
@@ -21,9 +23,10 @@ export default function Page({ movies }) {
 // 该函数只在服务端运行，组件渲染之前，build期间运行
 export async function getStaticProps() {
   const res = await getMovies();
+  console.log(res, 'res');
   return {
     props: {
-      movies: res.data
+      movies: res.data,
     },
   };
 }
