@@ -17,19 +17,11 @@ export default () => {
             <a>电影</a>
           </Link>
         </li>
+ 
         <li>
-          <Link href='/movies/3'>
-            <a>电影详情页</a>
+          <Link href='/login'>
+            <a>login</a>
           </Link>
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              router.push('/movies/a/b/c');
-            }}
-          >
-            跳转到[...params].js
-          </button>
         </li>
       </ul>
     </div>

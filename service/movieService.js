@@ -1,11 +1,16 @@
-import request from './request';
+import request from "./request";
 
-export default async function getMovies(page = 1, limit = 10) {
-  let resp = await request.get('/api/student/findAll?appkey=15928140420_1585573953214', {
+export async function getMovies(page = 1, limit = 10) {
+  let resp = await request.get("/api/movie", {
     params: {
       page,
-      limit,
-    },
+      limit
+    }
   });
+  return resp.data;
+}
+
+export async function getMovie(id) {
+  let resp = await request.get("/api/movie/" + id);
   return resp.data;
 }

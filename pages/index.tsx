@@ -1,6 +1,8 @@
 import Head from 'next/head';
+import { getMovies } from '../service/movieService';
 
-export default function index() {
+export default function index(props) {
+ 
   return (
     <div>
       <Head>
@@ -8,7 +10,15 @@ export default function index() {
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
       <h1>Index 首页</h1>
-      <img src="/favicon.ico" alt="" />
     </div>
   );
+}
+
+export async function getStaticProps() {
+ 
+  return {
+    props: {
+      a: 1,
+    },
+  };
 }

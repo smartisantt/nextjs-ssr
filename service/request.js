@@ -4,7 +4,7 @@ const config = {};
 
 if (typeof window == 'undefined') {
   // 服务器
-  config.baseURL = 'https://open.duyiedu.com/';
+  config.baseURL = 'http://yuanjin.tech:5100/';
 } else {
   // 浏览器
 }
