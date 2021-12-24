@@ -17,10 +17,15 @@ export default () => {
             <a>电影</a>
           </Link>
         </li>
- 
+
         <li>
           <Link href='/login'>
             <a>login</a>
+          </Link>
+        </li>
+        <li>
+          <Link href='/redux'>
+            <a>redux测试</a>
           </Link>
         </li>
       </ul>

@@ -42,6 +42,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.15.4", "@babel/runtime@^7.9.2":
+  version "7.16.5"
+  resolved "https://registry.npmmirror.com/@babel/runtime/download/@babel/runtime-7.16.5.tgz#7f3e34bf8bdbbadf03fbb7b1ea0d929569c9487a"
+  integrity sha512-TXWihFIS3Pyv5hzR7j6ihmeLkZfrXGxAr5UfSl8CHf+6q/wpiYDkUau0czckpYG8QmnCIuPpdLtuA9VmuGGyMA==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/types@7.15.0":
   version "7.15.0"
   resolved "https://registry.npmmirror.com/@babel/types/download/@babel/types-7.15.0.tgz#61af11f2286c4e9c69ca8deb5f4375a73c72dcbd"
@@ -162,6 +169,14 @@
   resolved "https://registry.npmmirror.com/@next/swc-win32-x64-msvc/download/@next/swc-win32-x64-msvc-12.0.7.tgz#8d75d3b6a872ab97ab73e3b4173d56dbb2991917"
   integrity sha512-frEWtbf+q8Oz4e2UqKJrNssk6DZ6/NLCQXn5/ORWE9dPAfe9XS6aK5FRZ6DuEPmmKd5gOoRkKJFFz5nYd+TeyQ==
 
+"@types/hoist-non-react-statics@^3.3.0":
+  version "3.3.1"
+  resolved "https://registry.npmmirror.com/@types/hoist-non-react-statics/download/@types/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
+  integrity sha1-ESSq/lEYy1kZd66xzqrtEHDrA58=
+  dependencies:
+    "@types/react" "*"
+    hoist-non-react-statics "^3.3.0"
+
 "@types/http-proxy@^1.17.5":
   version "1.17.8"
   resolved "https://registry.npmmirror.com/@types/http-proxy/download/@types/http-proxy-1.17.8.tgz#968c66903e7e42b483608030ee85800f22d03f55"
@@ -178,6 +193,25 @@
   version "15.7.4"
   resolved "https://registry.npmmirror.com/@types/prop-types/download/@types/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha1-/PcgXCXf95Xuea8eMNosl5CAjxE=
+
+"@types/react-redux@^7.1.20":
+  version "7.1.21"
+  resolved "https://registry.npmmirror.com/@types/react-redux/download/@types/react-redux-7.1.21.tgz#f32bbaf7cbc4b93f51e10d340aa54035c084b186"
+  integrity sha512-bLdglUiBSQNzWVVbmNPKGYYjrzp3/YDPwfOH3nLEz99I4awLlaRAPWjo6bZ2POpxztFWtDDXIPxBLVykXqBt+w==
+  dependencies:
+    "@types/hoist-non-react-statics" "^3.3.0"
+    "@types/react" "*"
+    hoist-non-react-statics "^3.3.0"
+    redux "^4.0.0"
+
+"@types/react@*":
+  version "17.0.38"
+  resolved "https://registry.npmmirror.com/@types/react/download/@types/react-17.0.38.tgz#f24249fefd89357d5fa71f739a686b8d7c7202bd"
+  integrity sha512-SI92X1IA+FMnP3qM5m4QReluXzhcmovhZnLNm3pyeQlooi02qI7sLiepEYqT678uNiyc25XfCqxREFpy3W7YhQ==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
 
 "@types/react@^17.0.37":
   version "17.0.37"
@@ -869,6 +903,13 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
+hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.npmmirror.com/hoist-non-react-statics/download/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=
+  dependencies:
+    react-is "^16.7.0"
+
 http-errors@1.7.3:
   version "1.7.3"
   resolved "https://registry.npmmirror.com/http-errors/download/http-errors-1.7.3.tgz#6c619e4f9c60308c38519498c14fbb10aacebb06"
@@ -1123,7 +1164,7 @@ lodash.sortby@^4.7.0:
   resolved "https://registry.npmmirror.com/lodash.sortby/download/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
 
-loose-envify@^1.1.0:
+loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.nlark.com/loose-envify/download/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=
@@ -1413,6 +1454,15 @@ process@0.11.10:
   resolved "https://registry.nlark.com/process/download/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
 
+prop-types@^15.7.2:
+  version "15.8.0"
+  resolved "https://registry.npmmirror.com/prop-types/download/prop-types-15.8.0.tgz#d237e624c45a9846e469f5f31117f970017ff588"
+  integrity sha512-fDGekdaHh65eI3lMi5OnErU6a8Ighg2KjcjQxO7m8VHyWjcPyj5kiOgV1LQDOOOgVy3+5FgjXvdSSX7B8/5/4g==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
+
 public-encrypt@^4.0.0:
   version "4.0.3"
   resolved "https://registry.nlark.com/public-encrypt/download/public-encrypt-4.0.3.tgz#4fcc9d77a07e48ba7527e7cbe0de33d0701331e0"
@@ -1476,10 +1526,27 @@ react-dom@^17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-is@17.0.2:
+react-is@17.0.2, react-is@^17.0.2:
   version "17.0.2"
   resolved "https://registry.npmmirror.com/react-is/download/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha1-5pHUqOnHiTZWVVOas3J2Kw77VPA=
+
+react-is@^16.13.1, react-is@^16.7.0:
+  version "16.13.1"
+  resolved "https://registry.npmmirror.com/react-is/download/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
+  integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
+
+react-redux@^7.2.6:
+  version "7.2.6"
+  resolved "https://registry.npmmirror.com/react-redux/download/react-redux-7.2.6.tgz#49633a24fe552b5f9caf58feb8a138936ddfe9aa"
+  integrity sha1-SWM6JP5VK1+cr1j+uKE4k23f6ao=
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "@types/react-redux" "^7.1.20"
+    hoist-non-react-statics "^3.3.2"
+    loose-envify "^1.4.0"
+    prop-types "^15.7.2"
+    react-is "^17.0.2"
 
 react-refresh@0.8.3:
   version "0.8.3"
@@ -1509,6 +1576,23 @@ readdirp@~3.5.0:
   integrity sha1-m6dMAZsV02UnjS6Ru4xI17TULJ4=
   dependencies:
     picomatch "^2.2.1"
+
+redux-devtools-extension@^2.13.9:
+  version "2.13.9"
+  resolved "https://registry.nlark.com/redux-devtools-extension/download/redux-devtools-extension-2.13.9.tgz#6b764e8028b507adcb75a1cae790f71e6be08ae7"
+  integrity sha1-a3ZOgCi1B63LdaHK55D3Hmvgiuc=
+
+redux-thunk@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.npmmirror.com/redux-thunk/download/redux-thunk-2.4.1.tgz#0dd8042cf47868f4b29699941de03c9301a75714"
+  integrity sha512-OOYGNY5Jy2TWvTL1KgAlVy6dcx3siPJ1wTq741EPyUKfn6W6nChdICjZwCd0p8AZBs5kWpZlbkXW2nE/zjUa+Q==
+
+redux@^4.0.0:
+  version "4.1.2"
+  resolved "https://registry.npmmirror.com/redux/download/redux-4.1.2.tgz#140f35426d99bb4729af760afcf79eaaac407104"
+  integrity sha1-FA81Qm2Zu0cpr3YK/PeeqqxAcQQ=
+  dependencies:
+    "@babel/runtime" "^7.9.2"
 
 regenerator-runtime@0.13.4:
   version "0.13.4"

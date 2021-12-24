@@ -5,9 +5,7 @@ const auth = 'authorization';
 
 function setItem(key, value) {
   
-  console.log(isBrowser());
   if (isBrowser()) {
-    
     localStorage.setItem(key, value);
   }
 }
@@ -24,22 +22,21 @@ function getItem(key) {
   }
 }
 
-export async function login(loginId, loginPwd) {
+export async function  login(loginId, loginPwd) {
   const resp = await request.post('/api/user/login', {
     loginId,
     loginPwd,
   });
 
+
   if (resp.data.code === 0) {
     // 登录成功
     const token = resp.headers[auth];
- 
  
     setItem('token', token);
   } else {
     removeItem('token');
   }
-
  
   return resp.data;
 }

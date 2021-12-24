@@ -29,11 +29,7 @@ export default function Page(props) {
         total={total}
         limit={limit}
         onPageChange={(page) => {
-          // if (process.browser) {
-          console.log('change');
-          console.log(page);
           router.push(`/movies`, `/movies/?page=${page}`, { shallow: true });
-          // }
         }}
       />
     </div>
