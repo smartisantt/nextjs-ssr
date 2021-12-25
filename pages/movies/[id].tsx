@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { getMovie, getMovies } from '../../service/movieService';
 
 export default ({ movie }) => {
-  console.log('render+++');
+ 
   const router = useRouter();
   if (router.isFallback) {
     return <h1>Loading...</h1>;
@@ -29,7 +29,7 @@ export async function getStaticProps({ params }) {
 //该函数用于得到有哪些可能出现的 params
 export async function getStaticPaths() {
   const resp = await getMovies();
-  console.log('getstaticpaths');
+ 
   const paths = resp.data?.map((m) => ({
     params: {
       id: String(m._id),
