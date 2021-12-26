@@ -28,6 +28,11 @@ export default () => {
             <a>redux测试</a>
           </Link>
         </li>
+        <li>
+          <Link href='/private'>
+            <a>private</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

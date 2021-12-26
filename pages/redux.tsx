@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import * as actions from '../store/actions/counter';
+import withStore from '../util/withStore';
 
 function Page({ number, increase, decrease, asyncIncrease, asyncDecrease }) {
   return (
@@ -39,3 +40,18 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Page);
+
+// export async function getServerSideProps() {
+//   const store = makeStore(null);
+//   await store.dispatch(actions.asyncIncrease());
+//   return {
+//     props: {
+//       _initialState: store.getState(),
+//     },
+//   };
+// }
+
+const func = async ({ store }) => {
+  await store.dispatch(actions.asyncIncrease());
+};
+export const getServerSideProps = withStore(func);

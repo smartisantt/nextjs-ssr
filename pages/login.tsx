@@ -1,25 +1,13 @@
-import { login, whoAmI, loginOut } from '../service/loginService';
-import { getServerInstance } from '../service/request';
+import LoginForm from '../components/LoginForm';
+import { connect } from 'react-redux';
+import { login } from '../store/actions/login';
 
-export default () => {
-  // login('11111111111', '123123').then((res) => {
-  //   console.log(res);
-  // });
+export default connect(null, mapDispatch)(LoginForm);
 
-  // whoAmI().then(res=>{
-  //   console.log(res);
-  // })
-  // loginOut();
-  return <h1>登录页面</h1>;
-};
-
-export async function getServerSideProps({ req }) {
-  const request = getServerInstance(req);
- 
-  whoAmI(request).then((res) => {
-    console.log(res, '>>>');
-  });
+function mapDispatch(dispatch) {
   return {
-    props: {},
+    async  onSubmit(formData) {
+      return await dispatch(login(formData.loginId, formData.loginPwd));
+    },
   };
 }

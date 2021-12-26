@@ -6,13 +6,23 @@ import isBrowser from '../util/isBrowser';
 
 let store;
 
-// 服务端针对不同的请求返回不同的仓库，创建仓库函数，浏览器无需每次都创建仓库
+/**
+ * 创建仓库的函数
+ * 该函数保证，如果是服务器端，每一次调用产生一个新的仓库
+ * 如果是客户端，每一次调用返回同一个仓库
+ * @param {*} initialState 仓库的初始值
+ */
 export default function (initialState) {
   if (isBrowser()) {
-    if (store) {
-      return store;
+    //客户端
+    if (!store) {
+      store = create(initialState);
     }
+    return store; //返回已有仓库
   }
-  store = createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunk)));
-  return store;
+  return create(initialState);
+}
+
+function create(initialState) {
+  return createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunk)));
 }
